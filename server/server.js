@@ -21,10 +21,9 @@ app.use(function(req, res, next) {
 });
 
 //send home page
-app.get('/', function(req, res, next) {
-  console.log('the server is running');
-  res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
-})
+// app.get('/', function(req, res, next) {
+//   res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
+// })
 
 app.get('/api/frequency', (req, res) => {
   freq.getFreq().then( (data) => {
