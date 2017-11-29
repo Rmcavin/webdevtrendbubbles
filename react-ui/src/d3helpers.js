@@ -82,7 +82,7 @@ export function d3draw(input) {
           })
           .attr('transform', 'translate(' + [width / 2, height / 2] + ')')
           .on('mouseover', function(d) {
-            tooltip.html('<p>' + d[columnForText] + ':' + d[columnForRadius] + '</p>' )
+            tooltip.html('<p>' + d[columnForText] + ': ' + d[columnForRadius] + '</p>' )
             return tooltip.style('visibility', 'visible')
           })
           .on('mousemove', function() {

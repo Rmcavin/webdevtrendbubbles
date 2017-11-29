@@ -34,6 +34,9 @@ app.get('/api/frequency', (req, res) => {
   })
 })
 
+app.get('*', (req,res) => {
+  res.sendFile(path.join(__dirname+'../react-ui/build/index.html'))
+})
 //error handler middleware
 app.use(function(req, res, next) {
   let err = new Error('Not Found')
